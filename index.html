@@ -16,11 +16,11 @@
     header {
       position: relative;
       background-color: #1a1a1a;
-      padding: 60px 20px 120px;
+      padding: 60px 20px 160px;
       border-bottom: 2px solid #6a0dad;
       text-align: center;
-      overflow: hidden;
-      height: 420px;
+      overflow: visible;
+      height: 480px;
     }
 
     .stars {
@@ -37,6 +37,22 @@
       height: 2px;
       background: white;
       border-radius: 50%;
+      animation: twinkle 4s infinite ease-in-out;
+    }
+
+    .starfield::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 200px;
+      width: 0;
+      height: 0;
+      box-shadow:
+        220px 40px white, 240px 80px white, 260px 120px white, 280px 160px white,
+        300px 100px white, 320px 60px white, 340px 180px white, 360px 140px white,
+        380px 60px white, 400px 200px white, 420px 90px white, 440px 50px white,
+        460px 180px white, 480px 120px white, 500px 60px white, 520px 160px white,
+        540px 100px white, 560px 40px white, 580px 180px white, 600px 120px white;
       animation: twinkle 4s infinite ease-in-out;
     }
 
@@ -91,7 +107,7 @@
 
     .sprite {
       position: absolute;
-      bottom: 0;
+      bottom: 60px;
       height: 280px;
       image-rendering: pixelated;
       z-index: 2;
@@ -159,29 +175,19 @@
 
   <header>
     <div class="stars">
-      <div class="star" style="top:40px; left:20px;"></div>
-      <div class="star" style="top:80px; left:60px;"></div>
-      <div class="star" style="top:120px; left:100px;"></div>
-      <div class="star" style="top:160px; left:140px;"></div>
-      <div class="star" style="top:100px; left:180px;"></div>
-      <div class="star" style="top:60px; left:220px;"></div>
-      <div class="star" style="top:180px; left:260px;"></div>
-      <div class="star" style="top:140px; left:300px;"></div>
-      <div class="star" style="top:60px; left:340px;"></div>
-      <div class="star" style="top:200px; left:380px;"></div>
-      <div class="star" style="top:80px; left:420px;"></div>
-      <div class="star" style="top:160px; left:460px;"></div>
-      <div class="star" style="top:100px; left:500px;"></div>
-      <div class="star" style="top:60px; left:540px;"></div>
-      <div class="star" style="top:180px; left:580px;"></div>
-      <div class="star" style="top:140px; left:620px;"></div>
-      <div class="star" style="top:60px; left:660px;"></div>
-      <div class="star" style="top:200px; left:700px;"></div>
-      <div class="star" style="top:80px; left:740px;"></div>
-      <div class="star" style="top:160px; left:780px;"></div>
-      <div class="star" style="top:100px; left:820px;"></div>
-      <div class="star" style="top:60px; left:860px;"></div>
-      <div class="star" style="top:180px; left:900px;"></div>
+      <!-- Left-side stars -->
+      <div class="star" style="top:40px; left:0px;"></div>
+      <div class="star" style="top:80px; left:20px;"></div>
+      <div class="star" style="top:120px; left:40px;"></div>
+      <div class="star" style="top:160px; left:60px;"></div>
+      <div class="star" style="top:100px; left:80px;"></div>
+      <div class="star" style="top:60px; left:100px;"></div>
+      <div class="star" style="top:180px; left:120px;"></div>
+      <div class="star" style="top:140px; left:140px;"></div>
+      <div class="star" style="top:60px; left:160px;"></div>
+      <div class="star" style="top:200px; left:180px;"></div>
+      <!-- Right-side sparkle -->
+      <div class="starfield"></div>
     </div>
 
     <img src="images/wizard.png" alt="Wizard Sprite" class="sprite wizard">
@@ -198,7 +204,6 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
-
   <div class="scroll" id="recruitment">
     <h2>Recruitment</h2>
     <p>Arcane Vanguard welcomes those who seek not only power, but purpose. We are more than a guild—we are a fellowship bound by arcane tradition and shared vision for Sosaria’s future.</p>
@@ -206,8 +211,9 @@
     <p><strong>Together:</strong> We believe in the strength of community. Whether in battle or ritual, every Vanguard stands beside their kin. We value alliance, friendship, honor, mutual support, and collective action.</p>
     <p><strong>Ready to join?</strong> We welcome mages, warriors, tamers, and crafters alike. Apply via Discord or visit our Guild Hall in-game to begin your journey.</p>
     <p><a href="https://discord.gg/R2gCPUJr4P" style="color:#6a0dad;">Apply via Discord</a></p>
-  </
-      <div class="divider">❧</div>
+  </div>
+
+  <div class="divider">❧</div>
 
   <div class="scroll" id="essence">
     <h2>Essence & Meaning</h2>
@@ -285,6 +291,5 @@
 </body>
 </html>
 
-                          
 
 
