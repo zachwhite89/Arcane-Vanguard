@@ -23,11 +23,33 @@
       height: 420px;
     }
 
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 4s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 0.2; }
+    }
+
     img.logo {
       max-width: 300px;
       margin-bottom: 20px;
       position: relative;
-      z-index: 2;
+      z-index: 3;
     }
 
     h1 {
@@ -36,12 +58,12 @@
       margin-bottom: 10px;
       font-family: 'Cinzel Decorative', serif;
       position: relative;
-      z-index: 2;
+      z-index: 3;
     }
 
     header p {
       position: relative;
-      z-index: 2;
+      z-index: 3;
       color: #ccc;
       font-style: italic;
     }
@@ -81,38 +103,6 @@
 
     .witch {
       right: 160px;
-    }
-
-    .stars {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .stars::before {
-      content: '';
-      position: absolute;
-      box-shadow:
-        0px 40px white, 20px 80px white, 40px 120px white, 60px 160px white,
-        80px 100px white, 100px 60px white, 120px 180px white, 140px 140px white,
-        160px 60px white, 180px 200px white, 200px 90px white, 220px 50px white,
-        240px 180px white, 260px 120px white, 280px 60px white, 300px 160px white,
-        320px 100px white, 340px 40px white, 360px 180px white, 380px 120px white,
-        400px 80px white, 420px 160px white, 440px 100px white, 460px 40px white,
-        480px 180px white, 500px 120px white, 520px 60px white, 540px 160px white,
-        560px 100px white, 580px 40px white, 600px 180px white, 620px 120px white,
-        640px 80px white, 660px 160px white, 680px 100px white, 700px 40px white,
-        720px 180px white, 740px 120px white, 760px 80px white, 780px 160px white,
-        800px 100px white, 820px 40px white, 840px 180px white, 860px 120px white,
-        880px 80px white, 900px 160px white, 920px 100px white;
-      animation: twinkle 4s infinite ease-in-out;
-    }
-
-    @keyframes twinkle {
-      0%, 100% { opacity: 0.8; }
-      50% { opacity: 0.2; }
     }
 
     .scroll {
@@ -168,8 +158,33 @@
 <body>
 
   <header>
+    <div class="stars">
+      <div class="star" style="top:40px; left:20px;"></div>
+      <div class="star" style="top:80px; left:60px;"></div>
+      <div class="star" style="top:120px; left:100px;"></div>
+      <div class="star" style="top:160px; left:140px;"></div>
+      <div class="star" style="top:100px; left:180px;"></div>
+      <div class="star" style="top:60px; left:220px;"></div>
+      <div class="star" style="top:180px; left:260px;"></div>
+      <div class="star" style="top:140px; left:300px;"></div>
+      <div class="star" style="top:60px; left:340px;"></div>
+      <div class="star" style="top:200px; left:380px;"></div>
+      <div class="star" style="top:80px; left:420px;"></div>
+      <div class="star" style="top:160px; left:460px;"></div>
+      <div class="star" style="top:100px; left:500px;"></div>
+      <div class="star" style="top:60px; left:540px;"></div>
+      <div class="star" style="top:180px; left:580px;"></div>
+      <div class="star" style="top:140px; left:620px;"></div>
+      <div class="star" style="top:60px; left:660px;"></div>
+      <div class="star" style="top:200px; left:700px;"></div>
+      <div class="star" style="top:80px; left:740px;"></div>
+      <div class="star" style="top:160px; left:780px;"></div>
+      <div class="star" style="top:100px; left:820px;"></div>
+      <div class="star" style="top:60px; left:860px;"></div>
+      <div class="star" style="top:180px; left:900px;"></div>
+    </div>
+
     <img src="images/wizard.png" alt="Wizard Sprite" class="sprite wizard">
-    <div class="stars"></div>
     <img src="images/witch.png" alt="Witch Sprite" class="sprite witch">
     <img src="logo.jpeg" alt="Arcane Vanguard Logo" class="logo">
     <h1>Arcane Vanguard</h1>
@@ -191,16 +206,13 @@
     <p><strong>Together:</strong> We believe in the strength of community. Whether in battle or ritual, every Vanguard stands beside their kin. We value alliance, friendship, honor, mutual support, and collective action.</p>
     <p><strong>Ready to join?</strong> We welcome mages, warriors, tamers, and crafters alike. Apply via Discord or visit our Guild Hall in-game to begin your journey.</p>
     <p><a href="https://discord.gg/R2gCPUJr4P" style="color:#6a0dad;">Apply via Discord</a></p>
-  </div>
-
-  <div class="divider">❧</div>
+  </
+      <div class="divider">❧</div>
 
   <div class="scroll" id="essence">
     <h2>Essence & Meaning</h2>
     <p><strong>Arcane:</strong> Mastery of ancient, mysterious, and evolving magical forces.</p>
-    
     <p><strong>Vanguard:</strong> The leading edge of progress, courage, and transformation.</p>
-    
     <p>Together, Arcane Vanguard represents a guild that honors the mystical traditions of Sosaria while forging new paths through magical innovation and exploration.</p>
   </div>
 
@@ -217,11 +229,8 @@
     <h2>Guild Values</h2>
     <ul>
       <li><strong>Innovation through Tradition:</strong> Evolving magic while respecting its roots.</li>
-      
       <li><strong>Exploration of the Unknown:</strong> Delving into forgotten dungeons, planar realms, and experimental spellcraft.</li>
-      
       <li><strong>Balance of Power and Wisdom:</strong> Strength tempered by insight.</li>
-      
       <li><strong>Guardians of Magical Integrity:</strong> Defending Sosaria from corrupted or unstable arcane forces.</li>
     </ul>
   </div>
@@ -275,5 +284,7 @@
   </footer>
 </body>
 </html>
+
                           
+
 
